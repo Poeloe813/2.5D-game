@@ -11,7 +11,7 @@ public class Movement1 : MonoBehaviour
 
     private Rigidbody rb;
 
-    public float SpeedLeftRight;
+    public float SpeedLeftRight; 
     public float SpeedUp;
     public float SpeedDown;
     public float SpeedSink;
