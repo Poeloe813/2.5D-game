@@ -11,10 +11,10 @@ public class Movement1 : MonoBehaviour
 
     private Rigidbody rb;
 
-    public float SpeedLeftRight = 5f;
-    public float SpeedUp = 4f;
-    public float SpeedDown = -4f;
-    public float SpeedSink = 2f;
+    public float SpeedLeftRight;
+    public float SpeedUp;
+    public float SpeedDown;
+    public float SpeedSink;
 
     private void Start()
     {
@@ -44,9 +44,9 @@ public class Movement1 : MonoBehaviour
 
         else if (moveDown.ReadValue<float>() == 1)
         {
-            rb.velocity += new Vector3(0, SpeedDown, 0);
+            rb.velocity += new Vector3(0, -SpeedDown, 0);
         }
-        else
+        else if (moveUp.ReadValue<float>() == 0)
         {
             rb.velocity += new Vector3(0, -SpeedSink, 0);
         }
